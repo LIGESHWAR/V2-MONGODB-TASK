@@ -1,0 +1,551 @@
+//database
+use mongodbtask-1
+
+//users 
+
+db.users.insertMany([
+{
+userid:1,
+username:"ligesh",
+coursename:"fullstack",
+tasks:[{t1_status:"completed"},{t2_status:"completed"},{t3_status:"completed"},{t4_status:"completed"},{t5_status:"completed"}],
+tc_date:[{t1_date:"15-oct-2020"},{t2_date:"20-oct-2020"},{t3_date:"25-oct-2020"},{t4_date:"31-oct-2020"},{t5_date:"10-nov-2020"}],
+placement:[{c1_status:"attend"},{c2_status:"attend"},{c3_status:"attend"},{c4_status:"attend"},{c5_status:"attend"}]
+},
+{
+userid:2,
+username:"logesh",
+coursename:"fullstack",
+tasks:[{t1_status:"completed"},{t2_status:"completed"},{t3_status:"completed"},{t4_status:"completed"},{t5_status:"completed"}],
+tc_date:[{t1_date:"15-oct-2020"},{t2_date:"20-oct-2020"},{t3_date:"25-oct-2020"},{t4_date:"31-oct-2020"},{t5_date:"10-nov-2020"}],
+placement:[{c1_status:"notattend"},{c2_status:"notattend"},{c3_status:"notattend"},{c4_status:"notattend"},{c5_status:"notattend"}]
+},
+{
+userid:3,
+username:"darshan",
+coursename:"fullstack",
+tasks:[{t1_status:"pending"},{t2_status:"pending"},{t3_status:"pending"},{t4_status:"completed"},{t5_status:"completed"}],
+tc_date:[{t1_date:"15-oct-2020"},{t2_date:"20-oct-2020"},{t3_date:"25-oct-2020"},{t4_date:"31-oct-2020"},{t5_date:"10-nov-2020"}],
+placement:[{c1_status:"attend"},{c2_status:"notattend"},{c3_status:"notattend"},{c4_status:"notattend"},{c5_status:"attend"}]
+},
+{
+userid:4,
+username:"chidambaranathan",
+coursename:"fullstack",
+tasks:[{t1_status:"completed"},{t2_status:"completed"},{t3_status:"pending"},{t4_status:"pending"},{t5_status:"pending"}],
+tc_date:[{t1_date:"15-oct-2020"},{t2_date:"20-oct-2020"},{t3_date:"25-oct-2020"},{t4_date:"31-oct-2020"},{t5_date:"10-nov-2020"}],
+placement:[{c1_status:"notattend"},{c2_status:"attend"},{c3_status:"attend"},{c4_status:"attend"},{c5_status:"notattend"}]
+},
+{
+userid:5,
+username:"jai priyan",
+course:"fullstack",
+tasks:[{t1_status:"completed"},{t2_status:"completed"},{t3_status:"pending"},{t4_status:"completed"},{t5_status:"pending"}],
+tc_date:[{t1_date:"15-oct-2020"},{t2_date:"20-oct-2020"},{t3_date:"25-oct-2020"},{t4_date:"31-oct-2020"},{t5_date:"10-nov-2020"}],
+placement:[{c1_status:"attend"},{c2_status:"attend"},{c3_status:"attend"},{c4_status:"attend"},{c5_status:"attend"}]
+}
+])
+
+
+//codekata
+
+db.codekata.insertMany([
+  {
+code_id:1,
+total:[
+  {problem1:"completd"},
+  {problem2:"completed"},
+  {problem3:"completed"},
+  {problem4:"pending"},
+  {problem5:"pending"}
+]},
+  {
+code_id:2,
+total:[
+  {problem1:"pending"},
+  {problem2:"pending"},
+  {problem3:"pending"},
+  {problem4:"pending"},
+  {problem5:"pending"}
+]},
+{
+code_id:3,
+total:[
+  {problem1:"completed"},
+  {problem2:"completed"},
+  {problem3:"completed"},
+  {problem4:"completed"},
+  {problem5:"pending"}
+]},
+{
+code_id:4,
+total:[
+  {problem1:"completed"},
+  {problem2:"completed"},
+  {problem3:"completed"},
+  {problem4:"completed"},
+  {problem5:"completed"}]
+},
+{
+code_id:5,
+total:[
+  {problem1:"pending"},
+  {problem2:"pending"},
+  {problem3:"completed"},
+  {problem4:"completed"},
+ {problem5:"completed"}
+]
+}])
+
+
+//attendance
+
+db.attendance.insertMany([
+{
+a_id:1,
+attend_check:[
+{date:"15-oct-2020" , day1_status:"present"},
+{date:"16-oct-2020" , day2_status:"present"},
+{date:"17-oct-2020" , day3_status:"present"},
+{date:"18-oct-2020" , day4_status:"present"},
+{date:"19-oct-2020" , day5_status:"present"},
+{date:"20-oct-2020" , day6_status:"present"},
+{date:"21-oct-2020" , day7_status:"present"},
+{date:"22-oct-2020" , day8_status:"present"},
+{date:"23-oct-2020" , day9_status:"present"},
+{date:"24-oct-2020" , day10_status:"present"},
+{date:"25-oct-2020" , day11_status:"present"},
+{date:"26-oct-2020" , day12_status:"present"},
+{date:"27-oct-2020" , day13_status:"present"},
+{date:"28-oct-2020" , day14_status:"present"},
+{date:"29-oct-2020" , day15_status:"present"},
+{date:"30-oct-2020" , day16_status:"present"},
+{date:"31-oct-2020" , day17_status:"present"},
+{date:"10-nov-2020" , day18_status:"present"}
+]
+},
+
+{
+a_id:2,
+attend_check:[
+{date:"15-oct-2020" , day1_status:"present"},
+{date:"16-oct-2020" , day2_status:"present"},
+{date:"17-oct-2020" , day3_status:"present"},
+{date:"18-oct-2020" , day4_status:"present"},
+{date:"19-oct-2020" , day5_status:"present"},
+{date:"20-oct-2020" , day6_status:"absent"},
+{date:"21-oct-2020" , day7_status:"absent"},
+{date:"22-oct-2020" , day8_status:"present"},
+{date:"23-oct-2020" , day9_status:"present"},
+{date:"24-oct-2020" , day10_status:"present"},
+{date:"25-oct-2020" , day11_status:"present"},
+{date:"26-oct-2020" , day12_status:"absent"},
+{date:"27-oct-2020" , day13_status:"present"},
+{date:"28-oct-2020" , day14_status:"present"},
+{date:"29-oct-2020" , day15_status:"absent"},
+{date:"30-oct-2020" , day16_status:"present"},
+{date:"31-oct-2020" , day17_status:"present"},
+{date:"10-nov-2020" , day18_status:"present"}
+]
+},
+
+{
+a_id:3,
+attend_check:[
+{date:"15-oct-2020" , day1_status:"present"},
+{date:"16-oct-2020" , day2_status:"present"},
+{date:"17-oct-2020" , day3_status:"absent"},
+{date:"18-oct-2020" , day4_status:"present"},
+{date:"19-oct-2020" , day5_status:"present"},
+{date:"20-oct-2020" , day6_status:"present"},
+{date:"21-oct-2020" , day7_status:"present"},
+{date:"22-oct-2020" , day8_status:"absent"},
+{date:"23-oct-2020" , day9_status:"present"},
+{date:"24-oct-2020" , day10_status:"present"},
+{date:"25-oct-2020" , day11_status:"present"},
+{date:"26-oct-2020" , day12_status:"present"},
+{date:"27-oct-2020" , day13_status:"absent"},
+{date:"28-oct-2020" , day14_status:"present"},
+{date:"29-oct-2020" , day15_status:"present"},
+{date:"30-oct-2020" , day16_status:"absent"},
+{date:"31-oct-2020" , day17_status:"present"},
+{date:"10-nov-2020" , day18_status:"absent"}
+]
+},
+
+{
+a_id:4,
+attend_check:[
+{date:"15-oct-2020" , day1_status:"absent"},
+{date:"16-oct-2020" , day2_status:"present"},
+{date:"17-oct-2020" , day3_status:"present"},
+{date:"18-oct-2020" , day4_status:"present"},
+{date:"19-oct-2020" , day5_status:"absent"},
+{date:"20-oct-2020" , day6_status:"present"},
+{date:"21-oct-2020" , day7_status:"present"},
+{date:"22-oct-2020" , day8_status:"present"},
+{date:"23-oct-2020" , day9_status:"present"},
+{date:"24-oct-2020" , day10_status:"present"},
+{date:"25-oct-2020" , day11_status:"present"},
+{date:"26-oct-2020" , day12_status:"absent"},
+{date:"27-oct-2020" , day13_status:"present"},
+{date:"28-oct-2020" , day14_status:"present"},
+{date:"29-oct-2020" , day15_status:"present"},
+{date:"30-oct-2020" , day16_status:"present"},
+{date:"31-oct-2020" , day17_status:"present"},
+{date:"10-nov-2020" , day18_status:"absent"}
+]
+},
+
+{
+a_id:5,
+attend_check:[
+{date:"15-oct-2020" , day1_status:"present"},
+{date:"16-oct-2020" , day2_status:"present"},
+{date:"17-oct-2020" , day3_status:"present"},
+{date:"18-oct-2020" , day4_status:"present"},
+{date:"19-oct-2020" , day5_status:"present"},
+{date:"20-oct-2020" , day6_status:"present"},
+{date:"21-oct-2020" , day7_status:"present"},
+{date:"22-oct-2020" , day8_status:"present"},
+{date:"23-oct-2020" , day9_status:"present"},
+{date:"24-oct-2020" , day10_status:"present"},
+{date:"25-oct-2020" , day11_status:"present"},
+{date:"26-oct-2020" , day12_status:"present"},
+{date:"27-oct-2020" , day13_status:"present"},
+{date:"28-oct-2020" , day14_status:"present"},
+{date:"29-oct-2020" , day15_status:"present"},
+{date:"30-oct-2020" , day16_status:"absent"},
+{date:"31-oct-2020" , day17_status:"present"},
+{date:"10-nov-2020" , day18_status:"absent"}
+]
+}
+
+])
+
+
+//topics
+
+
+db.topics.insertMany([
+{
+topic_id:1,
+topic_name:"html",
+taken_date:new Date("2020-10-01"),
+status:"completed",
+task_id:1
+},
+
+{
+topic_id:2,
+topic_name:"css",
+taken_date:new Date("2020-10-15"),
+status:"completed",
+task_id:2
+},
+
+{
+topic_id:3,
+topic_name:"javascript",
+taken_date:new Date("2020-10-31"),
+status:"completed",
+task_id:3
+},
+
+{
+topic_id:4,
+topic_name:"mysql",
+taken_date:new Date("2020-11-01"),
+status:"completed",
+task_id:4
+},
+
+{
+topic_id:5,
+topic_name:"mongodb",
+taken_date:new Date("2020-11-15"),
+status:"completed",
+task_id:5
+}
+
+
+])
+
+//tasks
+
+db.tasks.insertMany([
+{
+  task_id:1,
+  task_name:"design figma template using html and css", 
+  c_date:"15-oct-2020",
+  t_status:"completed"},
+{
+  task_id:2,
+  task_name:"design figma template tailwindcss", 
+  c_date:"14-nov-2020",
+  t_status:"completed"
+  },
+{
+  task_id:3,
+  task_name:"todolist using js",
+  c_date:"1-dec-2020",
+  t_status:"completed"
+  },
+{
+  task_id:4,
+  task_name:"react project",
+  c_date:"12-dec-2020",
+  t_status:"completed"
+ },
+{
+  task_id:5,
+  task_name:"sql queries",
+  c_date:"15-dec-2020",
+  t_status:"completed"
+  },
+])
+
+
+//company_drives
+
+db.company_drives.insertMany([
+  {
+    c_id: 1,
+    company: [
+      {
+        name: "wipro",
+        c_date: new Date("2020-10-19")
+      }
+    ]
+  },
+  {
+    c_id: 2,
+    company: [
+      {
+        name: "tcs",
+        c_date: new Date("2020-10-21")
+      }
+    ]
+  },
+  {
+    c_id: 3,
+    company: [
+      {
+        name: "zoho",
+        c_date: new Date("2020-12-17")
+      }
+    ]
+  },
+  {
+    c_id: 4,
+    company: [
+      {
+        name: "cts",
+        c_date: new Date("2020-12-16")
+      }
+    ]
+  },
+  {
+    c_id: 5,
+    company: [
+      {
+        name: "accenture",
+        c_date: new Date("2022-10-12")
+      }
+    ]
+  }
+]);
+
+//mentor
+
+db.mentor.insertMany([
+{m_id:1,mentor_name:"nagarajan",mentee_count:20},
+{m_id:2,mentor_name:"pugazh",mentee_count:25},
+{m_id:3,mentor_name:"praveen",mentee_count:10},
+{m_id:1,mentor_name:"rahul",mentee_count:14},
+{m_id:1,mentor_name:"ramesh",mentee_count:13}
+])
+
+
+
+//=================================================================================================
+//1.
+
+db.topics.aggregate([
+{
+$match:{
+taken_date:{
+$gte:new Date("2020-10-01"),
+$lte:new Date("2020-10-31")
+}}
+}
+,
+{
+$lookup:{
+from:"tasks",
+localField:"topic_id",
+foreignField:"task_id",
+as:"taskdetails"
+}
+},
+
+{
+$project:{
+_id:0,
+topic_name:1,
+taken_date:1,
+task_name: {        
+        $arrayElemAt: ["$taskdetails.task_name", 0]       }
+}
+}])
+
+
+//====================================================================================================
+//2.
+
+db.company_drives.find({
+  "company.c_date": {
+    $gte: new Date("2020-10-15"),
+    $lte: new Date("2020-10-31")
+  }
+});
+
+//===================================================================================================
+//3.
+
+db.users.aggregate([
+  {
+    $project: {
+      username: 1,
+      attended_companies: [
+        { company: "wipro", status: "$placement.c1_status" },
+        { company: "tcs", status: "$placement.c2_status" },
+        { company: "zoho", status: "$placement.c3_status" },
+        { company: "cts", status: "$placement.c4_status" },
+        { company: "accenture", status: "$placement.c5_status" }
+      ]
+    }
+  },
+  {
+    $unwind: "$attended_companies"   },
+  {
+    $match: {  
+      "attended_companies.status": "attend"
+    }
+  },
+  {
+    $group: {_id: "$attended_companies.company",
+      students: { $addToSet: "$username" } 
+    }
+  },
+  {
+    $project: {  
+      company_name: "$_id",
+      students: 1,
+      _id: 0
+    }
+  }
+]);
+
+
+//====================================================================================================
+//4.
+
+
+db.codekata.aggregate([
+  {
+    $unwind: "$total"  
+  },
+  {
+    $match: {
+      $or: [
+        { "total.problem1": "completed" },
+        { "total.problem2": "completed" },
+        { "total.problem3": "completed" },
+        { "total.problem4": "completed" },
+        { "total.problem5": "completed" }
+      ]
+    }
+  },
+  {
+    $group: {
+      _id: "$code_id", 
+      totalSolved: { $sum: 1 }  
+    }
+  },
+  {
+    $sort: { _id: 1 }  
+  }
+])
+
+//===================================================================================================
+//5.
+
+db.mentor.find({mentee_count:{$gte:15}})
+
+//===================================================================================================
+//6.
+
+db.users.aggregate([
+  {
+    $lookup: {
+      from: "attendance",
+      localField: "userid", 
+      foreignField: "a_id",      
+      as: "attendance_data"
+    }
+  },
+  {
+    $unwind: "$attendance_data" 
+  },
+  {
+    $project: {
+      username: 1,
+      tasks: 1,
+      tc_date: 1,
+      attendance: "$attendance_data.attend_check",     }
+  },
+  {
+    $match: {
+
+      $and: [
+        { 
+          $or: [
+            { "tasks.t1_status": "pending", "tc_date.t1_date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "tasks.t2_status": "pending", "tc_date.t2_date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "tasks.t3_status": "pending", "tc_date.t3_date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "tasks.t4_status": "pending", "tc_date.t4_date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "tasks.t5_status": "pending", "tc_date.t5_date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } }
+          ]
+        },
+       
+        { 
+          $or: [
+            { "attendance.day1_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day2_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day3_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day4_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day5_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day6_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day7_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day8_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day9_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day10_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day11_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day12_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day13_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day14_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day15_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day16_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } },
+            { "attendance.day17_status": "absent", "attendance.date": { $gte: "15-oct-2020", $lte: "31-oct-2020" } }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    $count: "absent_and_pending_task_users" 
+  }
+])
+
+//====================================================================================================
